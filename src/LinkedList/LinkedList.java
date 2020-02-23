@@ -109,6 +109,18 @@ public class LinkedList<E> implements LinkedListADT<E> {
         return temp.getFirstName();
     }
 
+    public E remove(int index) {
+        E response = null;
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            response = removeFirst();
+        } else {
+            response = removeAfter(getNode(index - 1));
+        }
+        return response;
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
