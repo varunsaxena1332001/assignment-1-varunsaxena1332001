@@ -3,6 +3,50 @@ package LinkedList;
 import adt.LinkedListADT;
 
 public class LinkedList<E> implements LinkedListADT<E> {
+
+    private class Node<E> {
+        private Node<E> next;
+        private E firstName;
+        private E lastName;
+        private E number;
+        private E email;
+
+        private Node(E firstName, E lastName, E number, E email, Node<E> next) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.number = number;
+            this.email = email;
+            this.next = next;
+        }
+
+        private Node(E firstName, E lastName, E number, E email) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.number = number;
+            this.email = email;
+        }
+
+        public Node<E> getNext() {
+            return next;
+        }
+
+        public E getLastName() {
+            return lastName;
+        }
+
+        public E getNumber() {
+            return number;
+        }
+
+        public E getEmail() {
+            return email;
+        }
+
+        public E getFirstName() {
+            return firstName;
+        }
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
