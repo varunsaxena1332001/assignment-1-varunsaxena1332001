@@ -22,4 +22,10 @@ public class Person {
         System.out.println("---Here are all your contacts---");
         linkedList.print();
     }
+
+    public void searchContact(String value) {
+        int n = linkedList.search(value);
+        System.out.println(n + " match found!");
+        linkedList.searchValue();
+    }
 }
