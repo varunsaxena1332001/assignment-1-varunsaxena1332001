@@ -50,6 +50,14 @@ public class LinkedList<E> implements LinkedListADT<E> {
     int size = 0;
     private Node<E> head = null;
 
+    private Node<E> getNode(int index) {
+        Node<E> response = head;
+        for (int i = 0; i < index; i++) {
+            response = response.getNext();
+        }
+        return response;
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
