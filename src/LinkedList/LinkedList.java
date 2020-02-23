@@ -82,6 +82,24 @@ public class LinkedList<E> implements LinkedListADT<E> {
         }
     }
 
+    String DeletedFirstName;
+    String DeletedLastName;
+
+    public E removeFirst() {
+        E response = null;
+        Node<E> temp = head;
+        if (head != null) {
+            head = head.getNext();
+        }
+        if (temp != null) {
+            size--;
+            response = temp.getFirstName();
+            DeletedFirstName = (String) temp.getFirstName();
+            DeletedLastName = (String) temp.getLastName();
+        }
+        return response;
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
