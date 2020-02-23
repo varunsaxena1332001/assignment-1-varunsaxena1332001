@@ -17,4 +17,9 @@ public class Person {
         linkedList.add(firstName, lastName, number, email);
         linkedList.sort();
     }
+
+    public void viewContact() {
+        System.out.println("---Here are all your contacts---");
+        linkedList.print();
+    }
 }
