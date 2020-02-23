@@ -2,7 +2,7 @@ package LinkedList;
 
 import adt.LinkedListADT;
 
-public class LinkedList<E> implements LinkedListADT {
+public class LinkedList<E> implements LinkedListADT<E> {
     @Override
     public void add(Object firstName, Object lastName, Object number, Object email) {
 
