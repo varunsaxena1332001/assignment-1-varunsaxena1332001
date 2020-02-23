@@ -47,6 +47,9 @@ public class LinkedList<E> implements LinkedListADT<E> {
         }
     }
 
+    int size = 0;
+    private Node<E> head = null;
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
