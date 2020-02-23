@@ -210,4 +210,41 @@ public class LinkedList<E> implements LinkedListADT<E> {
         return n;
     }
 
+    public int compare(Object a, Object b) {
+
+        return ((String) a).compareTo((String) b);
+    }
+
+    public void sort() {
+        if (size > 1) {
+
+            for (int i = 0; i < size; i++) {
+                Node<E> temp = head;
+                for (int j = 0; j < size; j++) {
+                    if (temp.next != null) {
+                        if (compare((temp.firstName), (temp.next).firstName) > 0) {
+                            E value = temp.firstName;
+                            temp.firstName = temp.next.firstName;
+                            temp.next.firstName = value;
+
+                            value = temp.lastName;
+                            temp.lastName = temp.next.lastName;
+                            temp.next.lastName = value;
+
+                            value = temp.email;
+                            temp.email = temp.next.email;
+                            temp.next.email = value;
+
+                            value = temp.number;
+                            temp.number = temp.next.number;
+                            temp.next.number = value;
+
+                        }
+                        temp = temp.next;
+                    }
+                }
+            }
+        }
+    }
+
 }
