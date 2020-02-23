@@ -121,6 +121,12 @@ public class LinkedList<E> implements LinkedListADT<E> {
         return response;
     }
 
+    public String printDeletedContact() {
+        //String firstName= (String) this.getNode(index).getFirstName();
+        //String lastName= (String) this.getNode(index).getLastName();
+        return DeletedFirstName + " " + DeletedLastName;
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
