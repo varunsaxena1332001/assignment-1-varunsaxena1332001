@@ -64,6 +64,13 @@ public class LinkedList<E> implements LinkedListADT<E> {
         size++;
     }
 
+    private void addAfter(Node<E> node, E firstName, E lastName, E number, E email) {
+
+        Node<E> n = new Node<>(firstName, lastName, number, email, node.next);
+        node.next = n;
+        size++;
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
