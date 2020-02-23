@@ -100,6 +100,15 @@ public class LinkedList<E> implements LinkedListADT<E> {
         return response;
     }
 
+    private E removeAfter(Node<E> node) {
+        Node<E> temp = node.getNext();
+        if (temp != null) {
+            node.next = temp.getNext();
+            size--;
+        }
+        return temp.getFirstName();
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
