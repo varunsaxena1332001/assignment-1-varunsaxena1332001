@@ -4,12 +4,12 @@ import adt.LinkedListADT;
 
 public class LinkedList<E> implements LinkedListADT<E> {
     @Override
-    public void add(Object firstName, Object lastName, Object number, Object email) {
+    public void add(E firstName, E lastName, E number, E email) {
 
     }
 
     @Override
-    public Object remove(Object firstName) {
+    public E remove(E firstName) {
         return null;
     }
 
@@ -19,7 +19,7 @@ public class LinkedList<E> implements LinkedListADT<E> {
     }
 
     @Override
-    public int search(Object firstName) {
+    public int search(E firstName) {
         return 0;
     }
 }
