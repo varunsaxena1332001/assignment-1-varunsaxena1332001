@@ -127,14 +127,11 @@ public class LinkedList<E> implements LinkedListADT<E> {
         return DeletedFirstName + " " + DeletedLastName;
     }
 
+    int c = 0;
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
-
-    }
-
-    @Override
-    public E remove(E firstName) {
-        return null;
+        add(size, firstName, lastName, number, email);
     }
 
     @Override
@@ -143,7 +140,50 @@ public class LinkedList<E> implements LinkedListADT<E> {
     }
 
     @Override
-    public int search(E firstName) {
-        return 0;
+    public E remove(E firstName) {
+        return remove(size - 1);
     }
+
+    @Override
+    public int search(E firstName) {
+        int response = 0;
+        // write a loop to traverse the linked list
+        for (int i = 0; i < size; i++) {
+            // fetch the data of the current node
+            E data = this.getNode(i).getFirstName();
+            String data1 = (String) data;
+            // check if the item is equal to the data of the current node
+            if (data1.contains((String) firstName)) {
+                response = response + 1;
+            }
+        }
+        return response;
+    }
+
+    public void searchValue() {
+        int response = -1;
+
+        // write a loop to traverse the linked list
+
+        for (int i = 0; i < size; i++) {
+            // fetch the data of the current node
+
+            String firstName = (String) this.getNode(i).getFirstName();
+
+            if (firstName.contains((String) firstName)) {
+                firstName = (String) this.getNode(i).getFirstName();
+                String lastName = (String) this.getNode(i).getLastName();
+                String number = (String) this.getNode(i).getNumber();
+                String email = (String) this.getNode(i).getEmail();
+
+                System.out.println("-------- * -------- * -------- * --------");
+                System.out.println("firstName : " + firstName);
+                System.out.println("lastName : " + lastName);
+                System.out.println("number : " + number);
+                System.out.println("email : " + email);
+                System.out.println("-------- * -------- * -------- * --------");
+            }
+        }
+    }
+
 }
