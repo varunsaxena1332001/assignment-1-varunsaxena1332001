@@ -32,4 +32,9 @@ public class Person {
     public void printContactToRemove() {
         linkedList.printContactToDelete();
     }
+
+    public void removeContact(int index) {
+        linkedList.remove(index);
+        System.out.println(linkedList.printDeletedContact() + "'s contact deleted from list!");
+    }
 }
