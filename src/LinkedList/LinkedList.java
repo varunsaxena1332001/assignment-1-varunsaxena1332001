@@ -71,6 +71,17 @@ public class LinkedList<E> implements LinkedListADT<E> {
         size++;
     }
 
+    public void add(int index, E firstName, E lastName, E number, E email) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            addFirst(firstName, lastName, number, email);
+        } else {
+            Node<E> temp = getNode(index - 1);
+            addAfter(temp, firstName, lastName, number, email);
+        }
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
