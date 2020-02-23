@@ -136,7 +136,19 @@ public class LinkedList<E> implements LinkedListADT<E> {
 
     @Override
     public void print() {
-
+        for (int i = 0; i < size; i++) {
+            // fetch the data for the current node
+            E firstName = this.getNode(i).getFirstName();
+            E lastName = this.getNode(i).getLastName();
+            E number = this.getNode(i).getNumber();
+            E email = this.getNode(i).getEmail();
+            System.out.println("-------- * -------- * -------- * --------");
+            System.out.println("firstName : " + firstName);
+            System.out.println("lastName : " + lastName);
+            System.out.println("number : " + number);
+            System.out.println("email : " + email);
+            System.out.println("-------- * -------- * -------- * --------");
+        }
     }
 
     @Override
