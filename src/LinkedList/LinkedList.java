@@ -247,4 +247,12 @@ public class LinkedList<E> implements LinkedListADT<E> {
         }
     }
 
+    public void printContactToDelete() {
+        for (int i = 0; i < size; i++) {
+            E firstName = this.getNode(i).getFirstName();
+            E lastName = this.getNode(i).getLastName();
+            System.out.println((i + 1) + " " + firstName + " " + lastName);
+        }
+    }
+
 }

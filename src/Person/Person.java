@@ -28,4 +28,8 @@ public class Person {
         System.out.println(n + " match found!");
         linkedList.searchValue();
     }
+
+    public void printContactToRemove() {
+        linkedList.printContactToDelete();
+    }
 }
