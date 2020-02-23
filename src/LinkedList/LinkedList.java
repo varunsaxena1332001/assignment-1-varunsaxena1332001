@@ -58,6 +58,12 @@ public class LinkedList<E> implements LinkedListADT<E> {
         return response;
     }
 
+    public void addFirst(E firstName, E lastName, E number, E email) {
+        Node<E> n = new Node<>(firstName, lastName, number, email, head);
+        head = n;
+        size++;
+    }
+
     @Override
     public void add(E firstName, E lastName, E number, E email) {
 
